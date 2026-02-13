@@ -5,28 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>San Luca | Cerveza Artesanal</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
 body{
     margin:0;
+    background:#0b0b0b;
+    color:#f1f1f1;
     font-family: 'Montserrat', sans-serif;
-    background-color:#0f0f0f;
-    color:#f5f5f5;
+    scroll-behavior:smooth;
 }
 
 header{
-    background:#000;
-    padding:20px;
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px);
+    padding:15px 0;
     text-align:center;
+    z-index:1000;
 }
 
-header h1{
-    font-family:'Playfair Display', serif;
-    font-size:40px;
-    color:#d4af37;
-    margin:0;
+.logo{
+    width:150px;
 }
 
 nav{
@@ -34,91 +37,102 @@ nav{
 }
 
 nav a{
-    color:white;
+    color:#c6a75e;
     margin:0 15px;
     text-decoration:none;
-    font-weight:300;
+    font-size:14px;
+    letter-spacing:2px;
 }
 
 .hero{
-    background:url('https://images.unsplash.com/photo-1608270586620-248524c67de9') center/cover;
-    height:80vh;
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1516455590571-18256e5bb9ff') center/cover no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
+    flex-direction:column;
 }
 
-.hero h2{
-    font-size:45px;
-    background:rgba(0,0,0,0.6);
-    padding:20px;
-    border-radius:5px;
+.hero h1{
+    font-family:'Cinzel', serif;
+    font-size:60px;
+    color:#e5c97a;
+    margin:0;
+    letter-spacing:4px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+    font-weight:300;
+}
+
+.btn{
+    margin-top:25px;
+    padding:12px 30px;
+    border:1px solid #c6a75e;
+    color:#c6a75e;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#c6a75e;
+    color:black;
 }
 
 .section{
-    padding:60px 20px;
+    padding:120px 20px;
     text-align:center;
 }
 
-.section h3{
-    font-size:32px;
-    color:#d4af37;
+.section h2{
+    font-family:'Cinzel', serif;
+    font-size:36px;
+    color:#e5c97a;
+    margin-bottom:40px;
 }
 
-.cards{
+.products{
     display:flex;
-    flex-wrap:wrap;
     justify-content:center;
-    gap:30px;
-    margin-top:40px;
+    flex-wrap:wrap;
+    gap:40px;
 }
 
-.card{
-    background:#1a1a1a;
-    padding:20px;
-    width:250px;
-    border-radius:8px;
+.product{
+    max-width:250px;
 }
 
-.card h4{
-    color:#d4af37;
+.product img{
+    width:100%;
+    border:1px solid #333;
+    transition:0.4s;
 }
 
-.button{
-    background:#d4af37;
-    color:black;
-    padding:10px 20px;
-    text-decoration:none;
-    display:inline-block;
-    margin-top:10px;
-    border-radius:4px;
+.product img:hover{
+    transform:scale(1.05);
 }
 
 footer{
     background:#000;
+    padding:30px;
     text-align:center;
-    padding:20px;
-    font-size:14px;
+    font-size:13px;
+    color:#777;
 }
 
 .whatsapp{
     position:fixed;
     bottom:20px;
     right:20px;
-    background:#25d366;
-    color:white;
+    background:#c6a75e;
+    color:black;
     padding:15px;
     border-radius:50%;
-    font-size:20px;
     text-decoration:none;
-}
-
-@media(max-width:768px){
-    .cards{
-        flex-direction:column;
-        align-items:center;
-    }
+    font-weight:bold;
 }
 
 </style>
@@ -127,67 +141,61 @@ footer{
 <body>
 
 <header>
-    <h1>San Luca</h1>
+    <img src="logo-dorado.png" class="logo">
     <nav>
-        <a href="#cervezas">Cervezas</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#cervezas">CERVEZAS</a>
+        <a href="#historia">HISTORIA</a>
+        <a href="#contacto">CONTACTO</a>
     </nav>
 </header>
 
 <section class="hero">
-    <h2>El sabor que honra la tradición</h2>
+    <h1>SAN LUCA</h1>
+    <p>Honor · Tradición · Artesanía</p>
+    <a href="#cervezas" class="btn">DESCUBRIR</a>
 </section>
 
 <section class="section" id="cervezas">
-    <h3>Nuestras Cervezas</h3>
-    <div class="cards">
+    <h2>Nuestras Cervezas</h2>
 
-        <div class="card">
-            <h4>Golden Ale</h4>
-            <p>Suave, refrescante y equilibrada.</p>
-            <p>Alcohol: 4.8%</p>
-            <a href="#" class="button">Consultar</a>
+    <div class="products">
+        <div class="product">
+            <img src="logo-dorado.png">
+            <p>Golden Ale · 4.8%</p>
         </div>
 
-        <div class="card">
-            <h4>IPA</h4>
-            <p>Intensa, aromática y lupulada.</p>
-            <p>Alcohol: 6.5%</p>
-            <a href="#" class="button">Consultar</a>
+        <div class="product">
+            <img src="logo-verde.png">
+            <p>IPA · 6.5%</p>
         </div>
 
-        <div class="card">
-            <h4>Roja</h4>
-            <p>Cuerpo medio con notas caramelizadas.</p>
-            <p>Alcohol: 5.5%</p>
-            <a href="#" class="button">Consultar</a>
+        <div class="product">
+            <img src="logo-dorado.png">
+            <p>Roja · 5.5%</p>
         </div>
-
     </div>
 </section>
 
-<section class="section" id="nosotros">
-    <h3>Sobre San Luca</h3>
+<section class="section" id="historia">
+    <h2>Nuestra Historia</h2>
     <p>
-        San Luca nace de la pasión por la cerveza auténtica.
-        Elaboramos cada lote con dedicación, ingredientes seleccionados
-        y respeto por la tradición artesanal.
+        San Luca nace del respeto por la tradición cervecera.
+        Cada lote es elaborado con paciencia, ingredientes nobles
+        y una dedicación que honra el arte artesanal.
     </p>
 </section>
 
 <section class="section" id="contacto">
-    <h3>Contacto</h3>
-    <p>📲 Pedidos por WhatsApp</p>
-    <p>📍 Argentina</p>
+    <h2>Contacto</h2>
+    <p>Pedidos y mayoristas</p>
     <p>⚠ Prohibida su venta a menores de 18 años</p>
 </section>
 
 <footer>
-    © 2026 San Luca - Cerveza Artesanal
+    © 2026 San Luca – Cerveza Artesanal
 </footer>
 
-<a href="https://wa.me/549XXXXXXXXX" class="whatsapp">W</a>
+<a href="https://wa.me/549XXXXXXXXX" class="whatsapp">WA</a>
 
 </body>
 </html>
