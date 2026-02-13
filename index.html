@@ -1,15 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Portfolio Franco</title>
-</head>
-<body>
-  <h1>Hola, soy Franco</h1>
-  <p>Este es mi portfolio web en construcción 🚀</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Luca | Cerveza Artesanal</title>
 
-  <h2>Bienvenidos a mi portfolio</h2>
-<p>Estoy aprendiendo desarrollo web 💪</p>
-  
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#0f0f0f;
+    color:#f5f5f5;
+}
+
+header{
+    background:#000;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    font-family:'Playfair Display', serif;
+    font-size:40px;
+    color:#d4af37;
+    margin:0;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:300;
+}
+
+.hero{
+    background:url('https://images.unsplash.com/photo-1608270586620-248524c67de9') center/cover;
+    height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:45px;
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:5px;
+}
+
+.section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.section h3{
+    font-size:32px;
+    color:#d4af37;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    background:#1a1a1a;
+    padding:20px;
+    width:250px;
+    border-radius:8px;
+}
+
+.card h4{
+    color:#d4af37;
+}
+
+.button{
+    background:#d4af37;
+    color:black;
+    padding:10px 20px;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:10px;
+    border-radius:4px;
+}
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>San Luca</h1>
+    <nav>
+        <a href="#cervezas">Cervezas</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>El sabor que honra la tradición</h2>
+</section>
+
+<section class="section" id="cervezas">
+    <h3>Nuestras Cervezas</h3>
+    <div class="cards">
+
+        <div class="card">
+            <h4>Golden Ale</h4>
+            <p>Suave, refrescante y equilibrada.</p>
+            <p>Alcohol: 4.8%</p>
+            <a href="#" class="button">Consultar</a>
+        </div>
+
+        <div class="card">
+            <h4>IPA</h4>
+            <p>Intensa, aromática y lupulada.</p>
+            <p>Alcohol: 6.5%</p>
+            <a href="#" class="button">Consultar</a>
+        </div>
+
+        <div class="card">
+            <h4>Roja</h4>
+            <p>Cuerpo medio con notas caramelizadas.</p>
+            <p>Alcohol: 5.5%</p>
+            <a href="#" class="button">Consultar</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="nosotros">
+    <h3>Sobre San Luca</h3>
+    <p>
+        San Luca nace de la pasión por la cerveza auténtica.
+        Elaboramos cada lote con dedicación, ingredientes seleccionados
+        y respeto por la tradición artesanal.
+    </p>
+</section>
+
+<section class="section" id="contacto">
+    <h3>Contacto</h3>
+    <p>📲 Pedidos por WhatsApp</p>
+    <p>📍 Argentina</p>
+    <p>⚠ Prohibida su venta a menores de 18 años</p>
+</section>
+
+<footer>
+    © 2026 San Luca - Cerveza Artesanal
+</footer>
+
+<a href="https://wa.me/549XXXXXXXXX" class="whatsapp">W</a>
+
 </body>
 </html>
